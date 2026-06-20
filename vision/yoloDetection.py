@@ -220,7 +220,7 @@ def run_yolo_on_stream(youtube_url):
                         mx = int(round(mapped[0][0][0]))
                         my = int(round(mapped[0][0][1]))
                         in_bounds = (0 <= mx < map_vis.shape[1] and 0 <= my < map_vis.shape[0])
-                        print(f"Mapped {class_name}: src=({src_x:.1f},{src_y:.1f}) -> mapped=({mx},{my}) in_bounds={in_bounds}")
+                        #print(f"Mapped {class_name}: src=({src_x:.1f},{src_y:.1f}) -> mapped=({mx},{my}) in_bounds={in_bounds}")
                         color = CLASS_COLORS.get(class_name, DEFAULT_CLASS_COLOR)
                         if in_bounds:
                             cv2.circle(map_vis, (mx, my), MAP_MARKER_RADIUS, color, -1)

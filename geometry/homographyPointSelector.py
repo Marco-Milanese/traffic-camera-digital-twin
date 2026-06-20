@@ -246,7 +246,7 @@ def HomographyDemo(srcImgPath, mapPath, homographyMatrix, resize_factor=.7):
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    srcPoints, mapPoints = selectHomographyPoints(r"geometry/ShibuyaScramble.png", r"geometry/ShibuyaScrambleMap.png")
+    srcPoints, mapPoints = selectHomographyPoints(r"geometry/shibuyaScramble.png", r"geometry/shibuyaScrambleMap.png")
     H = computeHomographyMatrix(srcPoints, mapPoints)
     np.save(r"geometry/ScrambleHomography.npy", H[0])
     np.save(r"geometry/ScrambleMask.npy", H[1])
